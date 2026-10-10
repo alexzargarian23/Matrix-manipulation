@@ -13,16 +13,21 @@ public class Program
 
         int limit = 5;
 
-        // Call your method
         Hit[] results = colderThan.ColderThan(grid, limit);
 
-        // Print results to console
         Console.WriteLine($"Hits colder than {limit}:");
         foreach (var hit in results)
         {
             Console.WriteLine($"({hit.Temperature}, row {hit.Row}, col {hit.Col})");
         }
+//above code
+        int[][] matrix1 = new int[][]
+        {
+            new int[] { 1, 4, 2 },
+            new int[] { 8, 0, 5 }
+        };
+        int[] result1 = above.Above(matrix1, 3);
+        Console.WriteLine("Greater than 3: " + string.Join(", ", result1));
 
-        //var arr = new int[][];
     }
 }
